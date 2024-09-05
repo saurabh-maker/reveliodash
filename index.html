@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Basic styles */
+        .chart-container {
+            position: relative;
+            margin: 20px 0;
+        }
+        .review-container {
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.4);
+            padding-top: 60px;
+        }
+        .modal-content {
+            background-color: #ffffff;
+            margin: 5% auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            width: 80%;
+            max-width: 1000px;
+            position: relative;
+            border-radius: 10px;
+            color: #333;
+        }
+        .close {
+            color: #333;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+        .close:hover,
+        .close:focus {
+            color: #000;
+            text-decoration: none;
+            cursor: pointer;
+        }
+        #expandedChart {
+            width: 100% !important;
+            height: 400px !important;
+        }
+        /* Additional styles for review data */
+        .review-box {
+            display: flex;
+            justify-content: space-between;
+        }
+        .review-box div {
+            width: 48%;
+            padding: 10px;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .positive-reviews {
+            background-color: #d4edda;
+            color: #155724;
+        }
+        .negative-reviews {
+            background-color: #f8d7da;
+            color: #721c24;
+        }
+    </style>
+</head>
+<body>
+    <h1>Revelio Data Dashboard</h1>
+    <input type="file" id="fileInput" accept=".csv, .xlsx">
+    <div id="dashboard-container">
+        <div id="review-container"></div>
+        <div id="dashboard"></div>
+    </div>
+
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2 class="modal-title">Expanded Chart</h2>
+            <canvas id="expandedChart"></canvas>
+        </div>
+    </div>
+
+    <!-- Include Chart.js and XLSX library -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/xlsx/dist/xlsx.full.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

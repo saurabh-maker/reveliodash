@@ -1,0 +1,206 @@
+/* General body styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f6f9; /* Light gray background for a clean look */
+    color: #333;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+/* Header styles */
+h1 {
+    text-align: center;
+    color: #ffffff;
+    background-color: #0078d4; /* Power BI blue */
+    padding: 15px;
+    margin-bottom: 20px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    font-size: 2em; /* Reduced font size */
+    text-transform: uppercase;
+    border-radius: 12px;
+    border-bottom: 4px solid #005a9e;
+}
+
+/* File input styles */
+#fileInput {
+    display: block;
+    margin: 20px auto;
+    padding: 10px;
+    font-size: 14px; /* Smaller font size */
+    background-color: #ffffff;
+    color: #333;
+    border: 2px solid #0078d4;
+    border-radius: 8px;
+    transition: background-color 0.3s ease, border 0.3s ease;
+}
+
+#fileInput:hover {
+    background-color: #e1e1e1;
+    border: 2px solid #005a9e;
+}
+
+/* Dashboard container styles */
+#dashboard-container {
+    padding: 20px;
+    max-height: 80vh;
+    overflow-y: auto;
+}
+
+/* Dashboard layout styles */
+#dashboard {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); /* Adjusted for better use of space */
+    gap: 20px;
+}
+
+/* Chart container styles */
+.chart-container {
+    background-color: #ffffff;
+    padding: 15px;
+    border-radius: 12px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+    max-height: 350px; /* Adjusted max height */
+    position: relative;
+}
+
+/* Chart title styles */
+.chart-title {
+    background-color: #0078d4; /* Power BI blue */
+    color: #ffffff;
+    padding: 10px 15px;
+    border-radius: 8px; /* Rounded corners */
+    margin-bottom: 15px;
+    font-size: 1.2em; /* Smaller title */
+    text-align: center;
+    font-weight: bold;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Canvas styles */
+canvas {
+    width: 100% !important;
+    height: auto;
+    max-height: 250px; /* Adjusted max height */
+}
+
+/* Modal styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding-top: 60px;
+}
+
+.modal-content {
+    background-color: #ffffff;
+    margin: 5% auto;
+    padding: 20px;
+    border: 2px solid #0078d4;
+    width: 80%;
+    max-width: 1000px;
+    position: relative;
+    border-radius: 12px;
+    color: #333;
+}
+
+.modal-title {
+    font-size: 1.4em; /* Slightly smaller title */
+    margin-bottom: 20px;
+    color: #0078d4;
+}
+
+.close {
+    color: #333;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #0078d4;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#expandedChart {
+    width: 100% !important;
+    height: 350px !important; /* Adjusted height */
+}
+
+/* Table container styles */
+.table-container {
+    background-color: #ffffff;
+    padding: 15px; /* Reduced padding */
+    border-radius: 12px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    overflow-x: auto;
+}
+
+/* Table title styles */
+.table-title {
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 15px;
+    font-size: 1.2em;
+    color: #0078d4;
+}
+
+/* Table styles */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+    border: 1px solid #ddd;
+    font-size: 0.9em; /* Smaller font size */
+}
+
+th {
+    background-color: #0078d4;
+    color: #ffffff;
+}
+
+td {
+    background-color: #f8f9fa;
+}
+
+/* Positive and negative sentiment styles */
+.positive-sentiment {
+    color: #28a745; /* Bright green */
+    font-weight: bold;
+}
+
+.negative-sentiment {
+    color: #dc3545; /* Bright red */
+    font-weight: bold;
+}
+
+/* Custom styles for Sentiment Charts */
+.sentiment-chart {
+    background-color: #ffffff;
+    padding: 15px; /* Reduced padding */
+    border-radius: 12px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.sentiment-title {
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 10px;
+    font-size: 1.2em; /* Smaller title size */
+    color: #0078d4;
+}
